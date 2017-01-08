@@ -1,0 +1,36 @@
+#APPLICATION-PROPERTIES
+server:
+  address: localhost
+  port: 7070
+  context-path: /crud_jpa_elastic
+  
+spring:
+  data:
+    elasticsearch:
+      cluster-nodes: 120.25.208.212:9300
+      cluster-name: my_test
+      repositories:
+        enabled: true
+      properties:
+        path.home: E:/elastic_search_db
+        transport.tcp.connect_timeout : 120s
+---
+#DBCONNECTION-PROPERTIES
+spring:
+  datasource:
+    url: jdbc:mysql://rm-wz9z04p38bh09714co.mysql.rds.aliyuncs.com:3306/hsmjia?zeroDateTimeBehavior=convertToNull
+    username: java_app_te
+    password: te@#_derejava22
+    test-while-idle: true
+    test-on-borrow: true
+    validation-query: SELECT 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy:  org.hibernate.cfg.ImprovedNamingStrategy
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  thymeleaf:
+    cache: false
+ 
