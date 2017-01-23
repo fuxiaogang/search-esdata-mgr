@@ -7,8 +7,8 @@ server:
 spring:
   data:
     elasticsearch:
-      cluster-nodes: 120.25.208.212:9300
-      cluster-name: my_test
+      cluster-nodes: 10.10.10.34:9300
+      cluster-name: es-testevn
       repositories:
         enabled: true
       properties:
